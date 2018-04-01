@@ -1,1 +1,9 @@
-apiversion: 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-pod
+spec:
+  containers:
+  - name: my-first-container
+    image: nginx
+
