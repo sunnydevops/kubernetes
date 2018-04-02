@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: my-first-rs
-         image: nginx
+        image: nginx
         ports:
         - containerPort: 80
   
