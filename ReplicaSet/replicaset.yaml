@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-second-rs
+  labels:
+    version: 0.0.1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: My-Project
+      role: front-end
+  template:
+    metadata:
+      labels:
+        project: My-Project
+        role: front-end
+        env: dev
+    spec:
+      containers:
+      - name: my-pod-for-rs
+        image: nginx
+        ports:
+        - containerPort: 80
