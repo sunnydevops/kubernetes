@@ -4,7 +4,7 @@ metadata:
   name: my-deployment
 spec:
   replicas: 2
-  miniReadySecond: 2
+  minReadySeconds: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
