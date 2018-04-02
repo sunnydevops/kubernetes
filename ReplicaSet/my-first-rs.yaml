@@ -15,7 +15,8 @@ spec:
         project: My-project
         ver: 0.1
     spec:
-      image: nginx
-      ports:
-      - containerPort: 80
+      containers:
+        image: nginx
+        ports:
+        - containerPort: 80
   
