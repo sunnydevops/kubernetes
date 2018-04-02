@@ -16,7 +16,7 @@ spec:
         ver: 0.1
     spec:
       containers:
-        image: nginx
+      - image: nginx
         ports:
         - containerPort: 80
   
