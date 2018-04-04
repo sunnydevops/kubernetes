@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: jenkins-deploy
 spec:
   replicas: 2
   minReadySeconds: 2
@@ -12,15 +12,15 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      app: jenkins:latest
+      app: jenkins
   template:
     metadata:
       labels:
-        app: jenkins:latest
+        app: jenkins
     spec:
       hostNetwork: true
       containers:
-      - name: my-web
-        image: jenkins:latest
+      - name: jenkins-pod
+        image: jenkins
         ports:
         - containerPort: 80
